@@ -1,0 +1,20 @@
+! U1 setvar "ip.dhcp.enable" "off"
+! U1 setvar "wlan.ip.protocol" "permanent"
+! U1 setvar "device.friendly_name" "ZEBRA_0337_01"  # podstawić  zebra_id_sklep _id_koputer
+! U1 setvar "ip.addr" "10.10.104.240"   # podstawic
+! U1 setvar "ip.netmask" "255.255.255.0"
+! U1 setvar "ip.gateway" "10.10.104.1"  # podstawic
+! U1 setvar "wlan.essid" "0337_t"   # podstawic
+! U1 setvar "wlan.leap_mode" "off"
+! U1 setvar "wlan.kerberos.mode" "off"
+! U1 setvar "wlan.encryption_mode" "off"
+! U1 setvar "wlan.8021x.enable" "off"
+! U1 setvar "wlan.operating_mode" "infrastructure"
+! U1 setvar "wlan.user_channel_list" "36,38,40,42,44,46,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140"
+! U1 setvar "wlan.country_code" "europe"
+! U1 setvar "wlan.allowed_band" "5"
+! U1 setvar "wlan.international_mode" "off"
+! U1 setvar "wlan.wpa.authentication" "psk"
+! U1 setvar "wlan.wpa.enable" "on"
+! U1 setvar "wlan.wpa.psk" "46450B75F7C3B07CF89D46EAEF9571B7AB7CAB0A81D959DCD071D53C68963D80"   # podstawic
+! U1 do "device.reset" ""
