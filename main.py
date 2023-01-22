@@ -9,7 +9,6 @@ window = tk.Tk()
 window.title("Configurator")
 window.geometry("300x200")
 
-
 # Create the input fields
 id_sklep_label = tk.Label(window, text="ID Sklepu:")
 id_sklep = tk.Spinbox(window)
@@ -19,16 +18,12 @@ id_dev = tk.Spinbox(window, from_=1, to=6)
 # Create the output label
 output_label = tk.Label(window, text="")
 
-# Create a function to compute the output
-
-
 def get_values():
     # Get the values from the input fields
-    sklep_id = str(id_sklep.get())
+    shop_id = str(id_sklep.get())
     user_id = str(id_dev.get())
-    formatted_shop_id = "{:04d}".format(int(sklep_id))
-    # formatted_shop_id+='_t'
-
+    formatted_shop_id = "{:04d}".format(int(shop_id))
+    
     # Convert the input to numbers (if possible)
     result = None
     try:
@@ -36,12 +31,10 @@ def get_values():
         with open('data.csv', 'r') as csv_file:
           # Create a CSV reader object
           reader = csv.reader(csv_file)
-        #   row_number = sklep_id
           # Loop through the rows
           for row in reader:
-            if(row[0]==formatted_shop_id):
+            if(row[0]==shop_id):
                 result = row
-                print(result)
                 break
     except:
         output_label.config(text="Nie otwieranie pliku, sprawdź nazwę pliku, plik powinien nazywać się data.csv")
